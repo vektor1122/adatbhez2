@@ -24,12 +24,31 @@ class Kontroller extends CI_Controller {
                 $this->load->model('szavazo');
 								$this->load->library('table');
                 $this->load->helper('url_helper');
+								$this->load->library('form_validation');
+								$this->load->helper('form');
         }
 
 	public function index(){
-
-		      $this->load->view('pages/index');
-
+$this->form_validation->set_message('required', '%s mezőt töltsd ki!');
+		      $this->form_validation->set_rules('nev', 'Név', 'required');
+          $this->form_validation->set_rules('orszag', 'Ország', 'required');
+					$this->form_validation->set_rules('szuletes_d_ev', 'Születési év', 'required');
+					$this->form_validation->set_rules('szuletes_d_honap', 'Születési honap', 'required');
+					$this->form_validation->set_rules('szuletes_d_nap', 'Születési nap', 'required');
+          $this->form_validation->set_rules('leg_m_veg', 'Legmagasabb végzetség', 'required');
+          $this->form_validation->set_rules('munkahely', 'Munkahely', 'required');
+          $this->form_validation->set_rules('beosztas', 'Beosztas', 'required');
+          $this->form_validation->set_rules('email', 'E-mail', 'required');
+          $adat = $this->input->post();
+					if ($this->form_validation->run() == FALSE)
+                {
+                        $this->load->view('pages/index');
+                }
+                else
+                {
+									      $this->szavazo->uj_szavazo($adat);
+                        $this->szavazo();
+                }
 		      }
 
 
@@ -40,9 +59,6 @@ class Kontroller extends CI_Controller {
 		 $data['tabla']=$tmp;
 
      $this->load->view('pages/szavazo',$data);
+          }
 
-
-
-
-     }
 }

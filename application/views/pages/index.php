@@ -9,9 +9,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <title>Szavazat Számláló</title>
 
-
+    <link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css'/>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
 
@@ -64,8 +64,7 @@
                     <div class="col-lg-12">
                         <h1>Kérlek a szavazáshoz töltsd ki a következő űrlapot: </h1>
 
-
-
+                        <?php $this->load->view('templates/form');?>
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
                     </div>
                 </div>
@@ -77,10 +76,10 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="<?php echo base_url('assets/js/jquery.js'); ?>"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
+    <!-- Latest compiled and minified JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <!-- Menu Toggle Script -->
     <!-- Saját jQuery -->

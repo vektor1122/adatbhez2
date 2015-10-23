@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <title>Szavazat Számláló</title>
 
 
     <!-- Bootstrap Core CSS -->
@@ -79,10 +79,10 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="<?php echo base_url('assets/js/jquery.js'); ?>"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
+    <!-- Latest compiled and minified JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <!-- Menu Toggle Script -->
     <!-- Saját jQuery -->
